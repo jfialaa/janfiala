@@ -1,0 +1,101 @@
+<?php
+
+class numbers {
+
+    static public function roundFiala($zaokrouhli) {
+        return round($zaokrouhli);
+    }
+
+    static public function ceilFiala($zaokrouhlinahoru) {
+        return ceil($zaokrouhlinahoru);
+    }
+
+    static public function floorFiala($zaokrouhlidolu) {
+        return floor($zaokrouhlidolu);
+    }
+
+    static public function sqrtFiala($druhaodmocnina) {
+        return sqrt($druhaodmocnina);
+    }
+
+    static public function powFiala($mocnina, $mocnitel) {
+        return pow($mocnina, $mocnitel);
+    }
+
+    static public function sinFiala($uhel) {
+        return sin($uhel);
+    }
+
+    static public function cosFiala($uhel) {
+        return cos($uhel);
+    }
+
+    static public function tanFiala($uhel) {
+        return tan($uhel);
+    }
+
+    static public function asinFiala($zcislanauhel) {
+        return asin($zcislanauhel);
+    }
+
+    static public function acosFiala($zcislanauhel) {
+        return acos($zcislanauhel);
+    }
+
+    static public function atanFiala($zcislanauhel) {
+        return atan($zcislanauhel);
+    }
+
+    static public function fmodFiala($zaklad, $delitel) {
+        return fmod($zaklad, $delitel);
+    }
+
+    static public function maxFiala($pole) {
+        return max($pole);
+    }
+
+    static public function minFiala($pole) {
+        return min($pole);
+    }
+
+    static public function absFiala($abscislo) {
+        return abs($abscislo);
+    }
+
+    static public function odecitaniFiala($a, $b) {
+        return $a - $b;
+    }
+
+    static public function scitaniFiala($a, $b) {
+        return $a + $b;
+    }
+
+    static public function deleniFiala($a, $b) {
+        return $a / $b;
+    }
+
+    static public function nasobeniFiala($a, $b) {
+        return $a * $b;
+    }
+
+    static public function number_formatFiala($formatuje) {
+        return number_format($formatuje);
+    }
+
+}
+
+$zaokrouhli = 38.83;
+$zaokrouhlinahoru = 38.83;
+$zaokrouhlidolu = 38.83;
+$druhaodmocnina = 16;
+$mocnina = 9;
+$mocnitel = 3;
+$uhel = 90;
+$zcislanauhel = 50;
+$zaklad = 20;
+$delitel = 5;
+$pole = array('1', '2', '3', '4', '5', '12', '16', '25', '69');
+$abscislo = 57.12;
+$a = 8;
+$b = 2;
+$formatuje = 10;
