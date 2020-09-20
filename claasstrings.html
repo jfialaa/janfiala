@@ -1,0 +1,129 @@
+<?php
+
+class stringFiala {
+    
+    static public function substrFiala($stringKterýmNahrazuji, $stringKterýNahrazuji) {
+        return substr($stringKterýmNahrazuji, $stringKterýNahrazuji);
+    }
+
+
+    static public function substr__replaceFiala($stringKterýmNahrazuji1, $stringKterýNahrazuji1, $začátečníBit) {
+        return substr_replace($stringKterýmNahrazuji1, $stringKterýNahrazuji1, $začátečníBit);
+    }
+
+    static public function strtrFiala($věta, $slovoKterýNahrazuji, $slovoKterýmNahrazuji) {
+        return strtr($věta, $slovoKterýNahrazuji, $slovoKterýmNahrazuji);
+    }
+
+    static public function strtoupperFiala($velkéPísmeno) {
+        return strtoupper($velkéPísmeno);
+    }
+
+    static public function strtolowerFiala($maléPísmeno) {
+        return strtolower($maléPísmeno);
+    }
+
+    static public function strrposFiala($odkudhledam, $cohledam) {
+        return strrpos($odkudhledam, $cohledam);
+    }
+
+    static public function strriposFiala($odkudhledam, $presnecohledam) {
+        return strripos($odkudhledam, $presnecohledam);
+    }
+
+    static public function strposFiala($odkudhledam, $cohledam) {
+        return strpos($odkudhledam, $cohledam);
+    }
+
+    static public function strlenFiala($délkaŘetězce) {
+        return strlen($délkaŘetězce);
+    }
+
+    static public function strchrFiala($odkudhledam, $cohledam) {
+        return strchr($odkudhledam, $cohledam);
+    }
+
+    static public function str_replaceFiala($Samohlásky, $Rozmezí, $veVětě) {
+        return str_replace($Samohlásky, $Rozmezí, $veVětě);
+    }
+
+    static public function md5Fiala($Zpráva) {
+        return md5($Zpráva);
+    }
+
+    static public function implodeFiala($Co, $Kam) {
+        return implode($Co, $Kam);
+    }
+
+    static public function explodeFiala($hranice, $Věta2) {
+        return explode($hranice, $Věta2);
+    }
+
+    static public function addcslashesFiala($vtomhleretezci, $rozmezi) {
+        return addcslashes($vtomhleretezci, $rozmezi);
+    }
+
+    static public function addslashFiala($Věta2) {
+        return addslashes($Věta2);
+    }
+
+    static public function trimPFiala($odsud, $vynechKusŘetězce) {
+        return trim($odsud, $vynechKusŘetězce);
+    }
+
+    static public function ucfirstFiala($Věta) {
+        return ucfirst($Věta);
+    }
+
+    static public function ucwordsFiala($Věta) {
+        return ucwords($Věta);
+    }
+
+}
+
+$stringKterýmNahrazuji = "kockopes";
+$stringKterýNahrazuji = 2;
+$stringKterýmNahrazuji1 = "pes";
+$stringKterýNahrazuji1 = "kocka";
+$začátečníBit = 0;
+$Věta = "kocka mi snedla susenku";
+$slovoKterýNahrazuji = "Kocka";
+$slovoKterýmNahrazuji = "Opice";
+$velkéPísmeno = "abcdefghijklmnopqrstuvwxyz";
+$maléPísmeno = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$odkudhledam = "fs56jhggj7OTGZVd";
+$cohledam = "j7O";
+$presnecohledam = "ggj7OTG";
+$délkaŘetězce = "Cego jsem tu";
+$Samohlásky = array('a', 'e', 'i', 'o', 'u', 'y');
+$Rozmezí = "";
+$veVětě = "Mam rad rizek";
+$Zpráva = "spenat";
+$co = "_";
+$kam = array('pes', 'kocka', 'medved');
+$hranice = '""';
+$Věta2 = "pes kocka medved";
+$vtomhleretezci = "Mam rad rizek";
+$rozmezi = 'A..z';
+$odsud = "\b\bMam rad rizek\b\b";
+$vynechKusŘetězce = "\b";
+
+var_dump(stringFiala::substrFiala($stringKterýmNahrazuji, $stringKterýNahrazuji));
+var_dump(stringFiala::substr__replaceFiala($stringKterýmNahrazuji1, $stringKterýNahrazuji1, $začátečníBit));
+var_dump(stringFiala::strtrFiala($Věta, $slovoKterýNahrazuji, $slovoKterýmNahrazuji));
+var_dump(stringFiala::strtoupperFiala($velkéPísmeno));
+var_dump(stringFiala::strtolowerFiala($maléPísmeno));
+var_dump(stringFiala::strrposFiala($odkudhledam, $cohledam));
+var_dump(stringFiala::strriposFiala($odkudhledam, $presnecohledam));
+var_dump(stringFiala::strposFiala($odkudhledam, $cohledam));
+var_dump(stringFiala::strlenFiala($délkaŘetězce));
+var_dump(stringFiala::strchrFiala($odkudhledam, $cohledam));
+var_dump(stringFiala::str_replaceFiala($Samohlásky, $Rozmezí, $veVětě));
+var_dump(stringFiala::md5Fiala($Zpráva));
+var_dump(stringFiala::implodeFiala($co, $kam));
+var_dump(stringFiala::explodeFiala($hranice, $Věta2));
+var_dump(stringFiala::addcslashesFiala($vtomhleretezci, $rozmezi));
+var_dump(stringFiala::addslashFiala($Věta2));
+var_dump(stringFiala::trimPFiala($odsud, $vynechKusŘetězce));
+var_dump(stringFiala::ucfirstFiala($Věta));
+var_dump(stringFiala::ucwordsFiala($Věta));
