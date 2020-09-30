@@ -1,36 +1,58 @@
  <?php
+ $instance = new Fiala;
+class Fiala {
+    public $audi1 = 10; 
+    public $audi2 = 3;
+    public $audi3 = 50;
+    public $audi4 = 11;
+    public $audi5 = 29 ;
+    protected $audi6 = 26;
+    protected $audi7 = 31; 
+    protected $audi8 = 36;
+    private $audi9 = 189;
+    private $audi10 = 65;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//abstraktní trida ustredny a v ni protected $napetí
-abstract class  ustredny_Fiala_Jan{
-
-    protected $napeti_Fiala_Jan;
-    //nastavení napeti
-    public function setNapeti_Fiala_Jan($napeti_Fiala_Jan){
-        $this->napeti_Fiala_Jan = $napeti_Fiala_Jan;
+    public function getaudi1 () {
+       return $this-> audi1;
     }
-    //precteni napeti
-    public function getNapeti_Fiala_Jan() {
-        return $this-> napeti_Fiala_Jan;
+    public function getaudi2 () {
+       return $this-> audi2;
     }
-}
-// class ustredna se dedi do abs. class ustredny
-class  ustredna_Fiala_Jan extends ustredny_Fiala_Jan{
-   public $Napeti_Fiala_Jan= 15;
-   //nastaveni konstanty type
-   const TYPE ="12";
-}
-//class iustredna dedi interface od abs. class ustredny
-interface iustredna_Fiala_Jan extends ustredny_Fiala_Jan{
-    //vypise nastavene hodnoty
-    public function _contruct ($Napeti_Fiala_Jan);
-}
+    public function getaudi3 () {
+       return $this-> audi3;
+    }
+    public function getaudi4 () {
+       return $this-> audi4;
+    }
+    public function getaudi5 () {
+       return $this-> audi5;
+    }
 
-//pres vardummp vypise hodnotu v type a hodnotu napeti na ustredne
- var_dump (ustredna_Fiala_Jan::TYPE);
- var_dump ($Napeti_Fiala_Jan);
-?>
+    private function setaudi9 () {
+       return $this-> audi9; 
+    }
+    private function setaudi10 () {
+        return $this-> audi10;
+    }
+    public function _construct () {
+
+    }
+
+} 
+var_dump ($instance);
+$cisla = new Fiala();
+$cisla-> getaudi1('10');
+echo $cisla-> getaudi1();
+echo '<br>';
+$cisla-> getaudi2('3');
+echo $cisla-> getaudi2();
+echo '<br>';
+$cisla-> getaudi3('50');
+echo $cisla-> getaudi3();
+echo '<br>';
+$cisla-> getaudi4('11');
+echo $cisla-> getaudi4();
+echo '<br>';
+$cisla-> getaudi5('29');
+echo $cisla-> getaudi5();
+?>;
