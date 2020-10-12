@@ -1,34 +1,88 @@
 <?php
-
-abstract class ustrednyFIALA
-//abstraktní třída ustrednyFIALA s protected $napeti uvnitř 
-{
-
-    protected $napetiFIALA;
-
-//nastavení napětí
-    public function setNapetiFIALA($napetiFIALA) :float {
-        $this -> napetiFIALA = $napetiFIALA;
+declare (strict_types = 1);
+namespace Fiala;
+final class UserFiala {
+    /** Vrátí zvuk
+     * @author Jan Fiala
+     * @param string $zvuk
+     * @return string
+     */
+    public function reproduktor(string $zvuk): string {
+        $reproduktor_zvuk = $this->ts->reproduktor($zvuk);
+        /**
+         * komentar
+         * nebo viceradkovy
+         */
+        return $reproduktor_zvuk;
     }
-//pouze reálné číslo psané číslicí pomocí :float
-//přečtení napětí
-    public function getNapetiFIALA() :float{
-        return $this -> napetiFIALA;
+    private $username = 'Jan';
+    private $password = '1234';
+    protected $firstName = 'Jan';
+    protected $lastName = 'Fiala';
+    protected $phone = 123456789;
+    public $street = 'Cukrovarská';
+    public $zip = 19600; // psc
+    public $invoiceId = 19600; // ico
+    public $loginCount = 0;
+    public $bornDate = 2002;
+    public function __construct() {
     }
-//pouze reálné číslo psané číslicí pomocí :float
+    /**
+     * komentar
+     * @param string $username
+     */
+    function setUsernameFiala(string $username) {
+        $this->username = $username;
+    }
+    /**
+     * komentar
+     * @param string $password
+     */
+    function setPasswordFiala(string $password) {
+        $this->password = $password;
+    }
+    /**
+     * komentar
+     * @return string
+     */
+    function getStreetFiala(): string {
+        return $this->street;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getZipFiala(): int {
+        return $this->zip;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getInvoiceIdFiala(): int {
+        return $this->invoiceId;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getLoginCountFiala(): int {
+        return $this->loginCount;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getBornDateFiala(): int {
+        return $this->bornDate;
+    }
 }
+$Jan = new UserFiala;
+$Jan->setUsernameFiala("Jan");
+echo $Jan->getStreetFiala();
+echo $Jan->getZipFiala();
+echo $Jan->getInvoiceIdFiala();
+echo $Jan->getLoginCountFiala();
+echo $Jan->getBornDateFiala();
 
-class ustrednaFIALA extends ustrednyFIALA
-//třída ustrednaFIALA dědí od ustrednyFIALA
-{
-
-    public $napetiFIALA = 12;
-
-    const TYPE = "5";
-
-//nastavení konstanty TYPE
-}
-
-var_dump(ustrednaFIALA::TYPE);
-var_dump($napetiFIALA);
-//výpis hodnoty TYPE a $napetiFIALA přes var_dump 
+echo var_dump($Jan);
